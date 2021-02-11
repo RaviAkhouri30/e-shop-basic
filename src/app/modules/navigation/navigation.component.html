@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-sm text-white navbar-dark my-nav">
+
+    <a class="navbar-brand" href="#">CapstoneProject</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon custom-toggler"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav text-center">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="products" routerLinkActive="active">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
+            </li>
+            <li class="nav-item" *ngIf= "auth.isAdmin() && auth.isLoggedIn()">
+                <a class="nav-link" routerLink="add-product" routerLinkActive="active">Add Products</a>
+            </li>
+        </ul>
+    </div>
+</nav>

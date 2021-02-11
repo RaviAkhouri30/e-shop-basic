@@ -1,0 +1,31 @@
+<div class="container bg-white" style="padding-bottom: 20px;">
+    <div class="row">
+        <div class="col-sm-6 img">
+            <img src="./../../../../assets/samsung.jpg" alt="demo-image" width="470px" height="500px"
+                class="mat-elevation-z8 mt-2">
+        </div>
+        <div class="col-sm-6">
+            <h2>{{detail.productName}}</h2>
+            <p><strong>{{detail.manufacturer}}</strong></p>
+            <p><strong>Description:</strong> {{detail.desc}}</p>
+            <h4><strong>{{detail.price | currency:'INR'}}</strong></h4> <br><br>
+            <p><strong>In stock:</strong> {{detail.quantity}} </p>
+            <div class="det-action mt-3">
+                <button mat-button (click)="onUpdate(detail)" color="accent"
+                    *ngIf="auth.isLoggedIn() && auth.isAdmin()">
+                    <mat-icon>edit</mat-icon> Edit
+                </button>
+                <button mat-button (click)="onDelete(detail)" color="warn" *ngIf="auth.isLoggedIn() && auth.isAdmin()">
+                    <mat-icon>delete</mat-icon> Delete
+                </button>
+                <button mat-button color="accent" *ngIf="!auth.isAdmin() || !auth.isLoggedIn()">
+                    <mat-icon>edit</mat-icon> Buy Now
+                </button>
+                <button mat-button (click)="addToCart(detail)" color="warn"
+                    *ngIf="!auth.isAdmin() || !auth.isLoggedIn()">
+                    <mat-icon>shopping_cart</mat-icon> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

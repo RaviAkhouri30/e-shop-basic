@@ -1,0 +1,25 @@
+<div class="container bg-white text-center">
+    <div class="heading">
+        <br><br><br>
+        My Account
+        <br><br><br>
+    </div>
+    <mat-list *ngIf="auth.isLoggedIn() && !auth.isAdmin()">
+        <mat-list-item>
+            Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;{{userDetails.name}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            Mobile No&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;{{userDetails.mob}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            Email ID&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;{{userDetails.email}}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+            Address&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;{{userDetails.address}}
+        </mat-list-item>
+    </mat-list>
+
+</div>

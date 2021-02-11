@@ -1,0 +1,169 @@
+{
+  "products": [
+    {
+      "productName": "Galaxy M30s",
+      "manufacturer": "Samsung",
+      "quantity": "10",
+      "price": "13999.00",
+      "desc": "Mega Monster",
+      "upload": "C:\\fakepath\\GIB.png",
+      "id": "dc7ffeaf-4b20-461a-b955-349d2a41012f",
+      "views": 19,
+      "purchased": 0
+    },
+    {
+      "productName": "Galaxy M31",
+      "manufacturer": "Samsung",
+      "quantity": "10",
+      "price": "15999",
+      "desc": "Mega Monster",
+      "upload": "C:\\fakepath\\GIB.png",
+      "id": "9d4b8360-7276-4c61-807e-1ae8b57001e4",
+      "views": 40,
+      "purchased": 0
+    },
+    {
+      "id": "6c745115-2f71-42e2-89ab-dc1fe3305077",
+      "productName": "Moto G5",
+      "quantity": "5",
+      "manufacturer": "Motorola",
+      "desc": "Lenovo has made a number of improvements to its all-new Moto G5 compared to last year's model, and it won't disappoint users in daily use. The company has also paid attention to design, and the Moto G5 can stand proud next to its competition. The latest version of Android and the camera improvements are welcome addition. There are few issues however like the heat management and lacklustre battery life. At this price, the Moto G5 is a good value for money device.",
+      "price": "10999.00",
+      "purchased": 0,
+      "upload": "C:\\fakepath\\14191116423683",
+      "views": 22
+    },
+    {
+      "id": "823418d5-e87e-45c5-a4b8-59ef29e2880e",
+      "productName": "Galaxy A50",
+      "quantity": "25",
+      "manufacturer": "Samsung",
+      "desc": "25MP+5MP+5MP triple camera | 25MP front facing camera\n16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support\nMemory, Storage & SIM: 6GB RAM | 64GB storage expandable up to 512GB | Dual SIM with dual standby (4G+4G)\nAndroid v8.1 Oreo operating system with 2.3GHz Exynos 9610 octa core processor\n4000mAH lithium-ion battery\n1 year manufacturer warranty for device and 6 months manufacturer warranty for in-box accessories including batteries from the date of purchase\nBox also includes: Earphones, Travel Adapter, USB Cable, Ejection Pin and User Manual",
+      "price": "29999.00",
+      "purchased": "0",
+      "upload": "C:\\fakepath\\14191116423683",
+      "views": 56
+    },
+    {
+      "id": "e67668bf-187e-4337-aa8d-49d2059e4059",
+      "productName": "Redmi Note 8 Pro",
+      "quantity": "11",
+      "manufacturer": "Xaiomi",
+      "desc": "description goes here",
+      "price": "13999.00",
+      "purchased": "0",
+      "upload": "C:\\fakepath\\14191116423683",
+      "views": "0"
+    },
+    {
+      "id": "bd0289de-f373-4240-969e-b08bb9d10df3",
+      "productName": "samsung s20",
+      "quantity": "10",
+      "manufacturer": "samsung",
+      "desc": "...",
+      "price": "105000.00",
+      "purchased": "0",
+      "upload": "",
+      "views": "0"
+    },
+    {
+      "id": "d74b4a13-801f-4e35-8fdd-7343e8cbe21a",
+      "productName": "samsung s20",
+      "quantity": "10",
+      "manufacturer": "samsung",
+      "desc": "...",
+      "price": "105000.00",
+      "purchased": "0",
+      "upload": "",
+      "views": "0"
+    }
+  ],
+  "userDetails": [
+    {
+      "id": "admin@care.com",
+      "userName": "admin",
+      "password": "admin123",
+      "isAdmin": true
+    },
+    {
+      "id": "ravi.akhouri@gmail.com",
+      "name": {
+        "fName": "Ravi",
+        "lName": "Akhouri"
+      },
+      "mob": "1111111111",
+      "address": {
+        "addLine1": "Sector 4",
+        "addLine2": "1A",
+        "city": "Gandhinagar",
+        "state": "Gujarat",
+        "pinCode": "382010"
+      },
+      "cart": [
+        {
+          "productID": "85a42dc1-e999-4dbf-98bf-10f01495bab2",
+          "productName": "Redmi 9 pro",
+          "quantity": "1",
+          "price": "13000.00"
+        }
+      ],
+      "wishList": [],
+      "orders": [],
+      "password": "ravi123",
+      "isAdmin": false
+    },
+    {
+      "id": "ravi@gamil.com",
+      "name": {
+        "fName": "Ravi",
+        "lName": "Akhouri"
+      },
+      "mob": "1121121111",
+      "address": {
+        "addLine1": "house no 1",
+        "addLine2": "dummy road",
+        "city": "Gandhinagar",
+        "state": "Gujarat",
+        "pinCode": "382010"
+      },
+      "cart": [
+        {
+          "productID": "dc7ffeaf-4b20-461a-b955-349d2a41012f",
+          "productName": "Galaxy M30s",
+          "quantity": "1",
+          "price": "13999.00"
+        },
+        {
+          "productID": "85a42dc1-e999-4dbf-98bf-10f01495bab2",
+          "productName": "Redmi 9 pro",
+          "quantity": "1",
+          "price": "13000.00"
+        }
+      ],
+      "wishList": [],
+      "orders": [],
+      "password": "ravi1234",
+      "isAdmin": false
+    },
+    {
+      "id": "ravi.akhouri@gmail.com",
+      "name": {
+        "fName": "Ravi",
+        "lName": "Akhouri"
+      },
+      "mob": "3545321245",
+      "address": {
+        "addLine1": "Sector 4",
+        "addLine2": "Plot No. 345",
+        "city": "Gandhinagar",
+        "state": "Gujarat",
+        "pinCode": "382009"
+      },
+      "cart": [],
+      "wishList": [],
+      "orders": [],
+      "password": "ravi123",
+      "isAdmin": false
+    }
+  ]
+}

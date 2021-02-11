@@ -1,0 +1,133 @@
+<div class="container-fluid expansion-panel-settings">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header class="expansion-header">
+                <mat-panel-title>
+                    Register With US
+                </mat-panel-title>
+                <mat-panel-description>
+                    From Here you can you can Register Yourself
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <form [formGroup]="newUserForm" (ngSubmit)="addNewUser()">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Your First Name</mat-label>
+                            <input matInput placeholder="Ex. Ravi" formControlName="fName" required>
+                            <mat-error *ngIf="fc.fName.touched && fc.fName.hasError">
+                                <span *ngIf="fc.fName.errors?.required">First Name is Required</span>
+                                <span *ngIf="fc.fName.errors?.pattern">Only Alphabets are allowed</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Your Last Name</mat-label>
+                            <input matInput placeholder="Ex. Akhouri" formControlName="lName" required>
+                            <mat-error *ngIf="fc.lName.touched && fc.lName.hasError">
+                                <span *ngIf="fc.lName.errors?.required">Last Name is Required</span>
+                                <span *ngIf="fc.lName.errors?.pattern">Only Alphabets are allowed</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Your Email ID</mat-label>
+                            <input matInput placeholder="Ex. abc@gmail.com" formControlName="email" required>
+                            <mat-error *ngIf="fc.email.touched && fc.email.hasError">
+                                <span *ngIf="fc.email.errors?.required">Email is Required</span>
+                                <span *ngIf="fc.email.errors?.email">Provide Valid Email ID</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Your Mobile Number</mat-label>
+                            <input matInput placeholder="Ex. 9222111211" formControlName="mob" required>
+                            <mat-error *ngIf="fc.mob.touched && fc.mob.hasError">
+                                <span *ngIf="fc.mob.errors?.required">Mobile Number is Required</span>
+                                <span *ngIf="fc.mob.errors?.pattern">Only Numbers are Allowed</span>
+                                <span *ngIf="fc.mob.errors?.minlength">Please Provide Valid Mobile Number</span>
+                                <span *ngIf="fc.mob.errors?.maxlength">Please Provide Valid Mobile Number</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Your Password</mat-label>
+                            <input type="password" matInput placeholder="Password" formControlName="password" required>
+                            <mat-error *ngIf="fc.password.touched && fc.password.hasError">
+                                <span *ngIf="fc.password.errors?.required">Password is Required</span>
+                                <span *ngIf="fc.password.errors?.pattern">Password must contain at least one letter, at
+                                    least one number, and be longer than six charaters.</span>
+                            </mat-error>
+                        </mat-form-field> 
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Cnfirm Your Password</mat-label>
+                            <input type="password" matInput placeholder="Confirm Password" formControlName="cPassword" required>
+                            <mat-error *ngIf="fc.cPassword.touched && fc.cPassword.hasError">
+                                <span *ngIf="fc.cPassword.errors?.required">Confirm Password is Required</span>
+                                <span *ngIf="fc.cPassword.errors?.mustMatch">Password Mismatch</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Address Line 1</mat-label>
+                            <input matInput placeholder="Ex. House No: 201" formControlName="addLine1" required>
+                            <mat-error *ngIf="fc.addLine1.touched && fc.addLine1.hasError">
+                                <span *ngIf="fc.addLine1.errors?.required">Address line 1 is Required</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Address Line 2</mat-label>
+                            <input matInput placeholder="Ex. Road Name" formControlName="addLine2">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>City</mat-label>
+                            <input matInput placeholder="Ex. Gandhinagar" formControlName="city" required>
+                            <mat-error *ngIf="fc.city.touched && fc.city.hasError">
+                                <span *ngIf="fc.city.errors?.required">City is Required</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>State</mat-label>
+                            <input matInput placeholder="Ex. Gujarat" formControlName="state" required>
+                            <mat-error *ngIf="fc.state.touched && fc.state.hasError">
+                                <span *ngIf="fc.state.errors?.required">State is Required</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-3">
+                        <mat-form-field>
+                            <mat-label>Pincode</mat-label>
+                            <input matInput placeholder="Ex. 382010" formControlName="pinCode" required>
+                            <mat-error *ngIf="fc.pinCode.touched && fc.pinCode.hasError">
+                                <span *ngIf="fc.pinCode.errors?.required">Pincode is Required</span>
+                                <span *ngIf="fc.pinCode.errors?.pattern">Provide Valid Pincode</span>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="action-button">
+                    <button mat-raised-button color="primary" type="submit">
+                        <mat-icon>update</mat-icon>Submit
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button mat-raised-button color="warn" type="button" (click)="clearForm()">
+                        <mat-icon>history</mat-icon>Reset
+                    </button>
+                </div>
+            </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

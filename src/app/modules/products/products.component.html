@@ -1,0 +1,101 @@
+<div class="container-fluid expansion-panel-settings">
+    <mat-accordion class="">
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header class="expansion-header">
+                <mat-panel-title>
+                    Search
+                </mat-panel-title>
+                <mat-panel-description>
+                    From Here you can search products
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <form [formGroup]="productsSearch" (ngSubmit)="onSearch()">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8 align-center">
+                            <mat-form-field class="form-field">
+                                <mat-label>Search</mat-label>
+                                <input matInput type="text" formControlName="input" placeholder="Ex. Samsung">
+                                <button mat-button
+                                    *ngIf="productsSearch.value.input!='' && productsSearch.value.input!=null" matSuffix
+                                    mat-icon-button aria-label="Clear" (click)="clearSearchInput()">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                            </mat-form-field>
+                            <div class="align-center">
+                                <label id="search-by">Search By:</label>
+                                <mat-radio-group aria-labelledby="search-by" [(ngModel)]="searchBy"
+                                    [ngModelOptions]="{standalone: true}">&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <mat-radio-button *ngFor="let options of searchByList" [value]="options.value">
+                                        {{options.viewValue}} &nbsp;&nbsp;&nbsp;&nbsp;
+                                    </mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="width-12">
+                    <button mat-raised-button color="primary" type="submit">
+                        <mat-icon>update</mat-icon>Search
+                    </button>
+                </div>
+            </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <div class="mt-3 mb-3"></div>
+    <mat-accordion class="mt-3 mb-3">
+        <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header class="expansion-header">
+                <mat-panel-title>
+                    Products
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="col-sm-12 mt-3 mb-3">
+                <div class="row">
+                    <div class="col-sm-3" *ngFor="let item of productsFilteredData">
+
+                        <mat-card class="mt-2 mb-2 mat-elevation-z8">
+                            <mat-card-header>
+                                <div mat-card-avatar>
+                                    <mat-icon>mobile_friendly</mat-icon>
+                                </div>
+                                <mat-card-title>{{item.productName}}</mat-card-title>
+                                <mat-card-subtitle>{{item.manufacturer}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <!-- <img mat-card-image src="{{item.upload}}" alt="Products"> -->
+                            <mat-card-content>
+                                <p>
+                                    {{item.price | currency:'INR'}}
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-button [routerLink]="['products',item.id]" color="primary">
+                                    <mat-icon>visibility</mat-icon> View Details
+                                </button>
+                                <div class="action">
+                                    <button mat-button (click)="onUpdate(item)" color="accent"
+                                        *ngIf="auth.isLoggedIn() && auth.isAdmin()">
+                                        <mat-icon>edit</mat-icon> Edit
+                                    </button>
+                                    <button mat-button (click)="onDelete(item)" color="warn"
+                                        *ngIf="auth.isLoggedIn() && auth.isAdmin()">
+                                        <mat-icon>delete</mat-icon> Delete
+                                    </button>
+                                    <button mat-button color="accent" *ngIf="!auth.isLoggedIn() || !auth.isAdmin()">
+                                        <mat-icon>edit</mat-icon> Buy Now
+                                    </button>
+                                    <button mat-button (click)="addToCart(item)" color="warn"
+                                        *ngIf="!auth.isLoggedIn() || !auth.isAdmin()">
+                                        <mat-icon>shopping_cart</mat-icon> Add to Cart
+                                    </button>
+                                </div>
+                            </mat-card-actions>
+                        </mat-card>
+
+
+                    </div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

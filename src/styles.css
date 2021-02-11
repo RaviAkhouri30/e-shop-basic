@@ -1,1 +1,339 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+header{
+    color: #3B3C3A;
+    padding: 10px;
+    background: #ffffff;
+}
+
+header h3 {
+    font-weight: 700;
+}
+header p {
+    font-weight: 400;
+}
+footer{
+    padding: 10px;
+    color: #ffffff;
+    margin-top: auto;
+    text-align: center;
+    background: #7A7A7A;
+}
+footer h4 {
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.mat-h4, .mat-subheading-1, .mat-typography h4{
+    margin: 0px;
+}
+.mat-h3, .mat-subheading-2, .mat-typography h3{
+    margin: 0em;
+}
+footer p {
+    margin-top: 0px;
+    font-weight: 400;
+}
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #E8E8E8;  
+}
+.menu-spacer {
+    flex: 1 1 auto;
+}  
+.my-nav{
+    padding: 0;
+    background: #3f51b5;
+    color: #ffffff;   
+}
+.my-nav a{
+    font-size: 18px;
+    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: #ffffff;
+}
+.my-nav a:hover{
+    color: #ffffff;
+}
+.my-nav .active{
+    background: rgba(0, 0, 0, 0.3);
+}
+.account{
+    padding: 12px;
+    justify-content: right;
+    justify-items: right;
+}
+.account .icon-settings{
+    margin-top: 10px;
+    color: #3f51b5;
+    margin-left: auto;
+    transform: scale(1.5);
+}
+.user{
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.head{
+    padding: 10px;
+}
+.head .heading{
+    margin-top: 10px;
+}
+.header-list{
+    margin: 20px 10px;
+    margin-left: 20px;
+    text-align: right;
+    list-style-type: none;
+}
+.header-list li{
+    display: inline-block;
+}
+.header-list a{
+    color: #3f51b5;
+    cursor: pointer;
+}
+.icon-color{
+    color: #3f51b5;
+}
+.header-list a:hover{
+    color: royalblue;
+    text-decoration: underline;
+}
+.expansion-panel-settings{
+    margin: 10px auto;
+    height: 100%;
+    height: auto;
+}
+mat-expansion-panel-header{
+    border-bottom: 2px solid royalblue;
+}
+.text-center{
+    text-align: center;
+}
+form{
+    margin: 10px auto;
+    width: 100%;
+}
+mat-form-field{
+    width: 100%;
+}
+.display-none{
+    display: none;
+}
+.no-list-type li{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#file-label {
+    display: inline-flex;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+#file-label mat-icon {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+}
+
+#file-label a {
+    cursor: pointer;
+}
+.action-button{
+    width: 25%;
+    margin: 10px auto;
+}
+.width-12{
+    width: 12.5%;
+    margin: 10px auto;
+}
+.min-height-300{
+    min-height: 300px;
+}
+.width-200{
+    width: 200px;
+}
+.width-70{
+    width: 70%;
+    margin-left: auto;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-auto{
+    overflow: auto;
+}
+.align-center{
+    margin: 5px auto;
+}
+.height-100{
+    min-height: 100%;
+    height: auto;
+}
+.no-scroll{
+position: absolute;
+}
+.text-white{
+    color: #ffffff;
+}
+.del{
+    width: 100%;
+}
+.text-center{
+    text-align: center;
+}
+.bordered-box{
+    border: 1px solid rgb(128, 128, 128);
+}
+.img{
+    width:200px;
+    height: 500px;
+}
+img img{
+    width: 100px;
+    height: 150px;
+}
+.box{
+    padding: 10px;
+    border: 1px solid #3f51b5;
+    border-radius: 4px;
+}
+.box-heading{
+    font-size: 24x;
+    color: #3f51b5;
+    border-bottom: 1px solid #3f51b5;
+    text-align: center;
+    width: 100%;
+}
+.align-left{
+    margin-right: auto;
+}
+.align-right{
+    float: right;
+}
+.invalid-user-error{
+    padding: 5px;
+    border-radius: 8px;
+    width: 90%;
+    margin: 5px auto;
+    background: rgba(250, 250, 0, 0.7);
+    text-align: center;
+    color: #D20000;
+    font-weight: 400;
+}
+.margin-top-20{
+    margin-top: 20px;
+    overflow: hidden;
+}
+.home-header{
+    position: relative;
+    height: 500px;
+    width: 110%;
+    padding: 50px;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-image: url('./assets/woman-holding-card-while-operating-silver-laptop-919436.jpg');
+    background-size: 1400px 1038px;
+}
+.shop-with-us{
+    padding: 20px 10px;
+    height: 300px;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.shop-with-us .heading{
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.shop-with-us p{
+    margin: 10px 0px;
+}
+.shop-with-us .btn{
+    margin: 10px 0px;
+}
+.our-products{
+    height: 150px;
+    width: 110%;
+    margin: 0px -15px;
+    padding: 40px 0px;
+    color: #7A7A7A;
+    background: #ffffff;
+    text-align: center;
+}
+.our-products .heading{
+    font-size: 24px;
+    text-decoration: underline;
+    margin: 10px auto;
+}
+.our-products p {
+    margin: 10px auto;
+}
+.contact-mat-icon{
+    transform: scale(0.5);
+}
+.page-not-found{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #7A7A7A;
+}
+.page-not-found h1{
+    font-size: 42px;
+    font-weight: 900;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+@media only screen and (max-width: 768px){
+    .shop-with-us{
+        padding: 20px 10px;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .header-list{
+        margin: 0;
+        text-align: center;
+        list-style-type: none;
+    }
+    .login{
+        text-align: center;
+        width: 60%;
+    }
+    .account{
+        width: 30%;
+    }
+    .head{
+        padding: 10px;
+        text-align: center;
+    }
+    .img{
+        width:100%;
+        height: 400px;
+        margin-bottom: 10px;
+    }
+    .img img{
+        width: 100%;
+        height: 350px;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
